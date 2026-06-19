@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El Centollo - Ubicación</title>
+    <title>El Centollo - Contacto</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,52 +20,76 @@
         <nav class="navbar">
             <a href="../index.html">Inicio</a>
             <a href="menu.html">Menú</a>
-            <a href="contacto.html">Contacto</a>
-            <a href="ubicacion.html" class="active">Ubicación</a>
+            <a href="contacto.html" class="active">Contacto</a>
+            <a href="ubicacion.html">Ubicación</a>
             <a href="reservas.html">Reservas</a>
             <a href="creditos.html">Créditos</a>
         </nav>
     </header>
 
-    <section class="ubicacion-section">
+    <section class="contact-section">
         <div class="contact-header">
-            <h2>Ubicación</h2>
-            <p>Encuéntranos en el corazón de la ciudad. Te esperamos con el mejor producto del mar.</p>
+            <h2>Contacto</h2>
+            <p>¿Tienes alguna pregunta o quieres hacernos un pedido? Escríbenos o llámanos.</p>
         </div>
 
         <div class="container">
             <div class="ubicacion-grid">
-                <div class="mapa-container">
-                    <!-- Mapa de Carrera 1 #93-50 Chicó Alto, Bogotá -->
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.3!2d-74.0473!3d4.6764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9b5e2a4b1a1b%3A0x1a2b3c4d5e6f7a8b!2sCarrera%201%20%2393-50%2C%20Chic%C3%B3%20Alto%2C%20Bogot%C3%A1!5e0!3m2!1ses!2sco!4v1620000000000!5m2!1ses!2sco"
-                        width="100%"
-                        height="450"
-                        style="border:0; border-radius: 8px;"
-                        allowfullscreen=""
-                        loading="lazy">
-                    </iframe>
+
+                <!-- Formulario de contacto -->
+                <div class="ubicacion-info">
+                    <h3><i class="fas fa-paper-plane"></i> Envíanos un mensaje</h3>
+
+                    <div style="display: flex; flex-direction: column; gap: 14px; margin-top: 16px;">
+                        <div>
+                            <label style="display:block; margin-bottom:4px; font-weight:500;">Nombre</label>
+                            <input type="text" placeholder="Tu nombre completo"
+                                style="width:100%; padding:10px 12px; border:1px solid #ccc; border-radius:6px; font-size:14px; box-sizing:border-box;">
+                        </div>
+                        <div>
+                            <label style="display:block; margin-bottom:4px; font-weight:500;">Correo electrónico</label>
+                            <input type="email" placeholder="tucorreo@ejemplo.com"
+                                style="width:100%; padding:10px 12px; border:1px solid #ccc; border-radius:6px; font-size:14px; box-sizing:border-box;">
+                        </div>
+                        <div>
+                            <label style="display:block; margin-bottom:4px; font-weight:500;">Teléfono (opcional)</label>
+                            <input type="tel" placeholder="+57 300 000 0000"
+                                style="width:100%; padding:10px 12px; border:1px solid #ccc; border-radius:6px; font-size:14px; box-sizing:border-box;">
+                        </div>
+                        <div>
+                            <label style="display:block; margin-bottom:4px; font-weight:500;">Mensaje</label>
+                            <textarea placeholder="Escribe tu mensaje aquí..." rows="5"
+                                style="width:100%; padding:10px 12px; border:1px solid #ccc; border-radius:6px; font-size:14px; resize:vertical; box-sizing:border-box;"></textarea>
+                        </div>
+                        <button onclick="alert('¡Mensaje enviado! Nos pondremos en contacto contigo pronto.')"
+                            style="background:#1a3a5c; color:#fff; border:none; padding:12px; border-radius:6px; font-size:15px; cursor:pointer; font-weight:500;">
+                            <i class="fas fa-paper-plane"></i> Enviar mensaje
+                        </button>
+                    </div>
                 </div>
 
+                <!-- Info de contacto -->
                 <div class="ubicacion-info">
-                    <h3><i class="fas fa-map-marker-alt"></i> Dirección</h3>
+                    <h3><i class="fas fa-address-book"></i> Información de contacto</h3>
+
+                    <p><i class="fas fa-phone"></i> <strong>Teléfono</strong></p>
+                    <p>(57) 316 690 0508</p>
+
+                    <p style="margin-top:16px;"><i class="fas fa-envelope"></i> <strong>Correo electrónico</strong></p>
+                    <p><a href="mailto:servicioalcliente@tramonti.com.co">servicioalcliente@tramonti.com.co</a></p>
+
+                    <p style="margin-top:16px;"><i class="fas fa-map-marker-alt"></i> <strong>Dirección</strong></p>
                     <p>Carrera 1 #93-50 Chicó Alto, Bogotá</p>
 
-                    <h3><i class="fas fa-clock"></i> Horario de atención</h3>
+                    <p style="margin-top:16px;"><i class="fas fa-clock"></i> <strong>Horario de atención</strong></p>
                     <p>Lunes a viernes: 8:00 - 14:30</p>
                     <p>Sábados: 8:00 - 14:00</p>
                     <p>Domingos y festivos: Cerrado</p>
 
-                    <h3><i class="fas fa-phone"></i> Teléfono</h3>
-                    <p>(57) 316 690 0508</p>
-
-                    <h3><i class="fas fa-envelope"></i> Email</h3>
-                    <p><a href="mailto:servicioalcliente@tramonti.com.co">servicioalcliente@tramonti.com.co</a></p>
-
-                    <h3><i class="fas fa-car"></i> Cómo llegar</h3>
-                    <p>TransMilenio: Estación Calle 100</p>
-                    <p>Parqueadero disponible en la zona</p>
+                    <p style="margin-top:16px;"><i class="fab fa-whatsapp"></i> <strong>WhatsApp</strong></p>
+                    <p><a href="https://wa.me/573166900508" target="_blank">Escríbenos por WhatsApp</a></p>
                 </div>
+
             </div>
         </div>
     </section>
@@ -123,7 +147,6 @@
         </div>
     </footer>
 
-    <!-- ✅ SCRIPT CORRECTO -->
     <script src="../js/js.js"></script>
 </body>
 </html>
