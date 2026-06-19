@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Centollo - Pescados y Mariscos</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo-container">
+            <i class="fas fa-crab logo-icon"></i>
+            <img src="./imagenes/can.webp" alt="El Centollo">
+            <h1 class="logo-text">El Centollo</h1>
+        </div>
+        <nav class="navbar">
+            <a href="index.html" class="active">Inicio</a>
+            <a href="paginas/menu.html">Menú</a>
+            <a href="paginas/contacto.html">Contacto</a>
+            <a href="paginas/ubicacion.html">Ubicación</a>
+            <a href="paginas/reservas.html">Reservas</a>
+            <a href="paginas/creditos.html">Créditos</a>
+        </nav>
+    </header>
+
+    <!-- Sección principal: Slider + Info del Centollo -->
+    <section class="centollo-section">
+        <div class="container">
+            <div class="centollo-grid">
+                <!-- SLIDER a la izquierda -->
+                <div class="slider-wrapper">
+                    <div class="slider-container">
+                        <div class="slider">
+                            <div class="slide active">
+                                <img src="./imagenes/1.png" alt="Centollo 1">
+                            </div>
+                            <div class="slide">
+                                <img src="./imagenes/2.png" alt="Centollo 2">
+                            </div>
+                            <div class="slide">
+                                <img src="./imagenes/3.png" alt="Centollo 3">
+                                </div>
+                                <div class="slide">
+                                <img src="./imagenes/4.png" alt="Centollo 4">
+                                </div>
+                                <div class="slide">
+                                <img src="./imagenes/5.png" alt="Centollo 5">
+                                </div>
+                            
+                        </div>
+                        <button class="slider-btn prev" onclick="changeSlide(-1)">&#10094;</button>
+                        <button class="slider-btn next" onclick="changeSlide(1)">&#10095;</button>
+                        <div class="slider-dots">
+                            <span class="dot active" onclick="goToSlide(0)"></span>
+                            <span class="dot" onclick="goToSlide(1)"></span>
+                            <span class="dot" onclick="goToSlide(2)"></span>
+                            <span class="dot" onclick="goToSlide(3)"></span>
+                            <span class="dot" onclick="goToSlide(4)"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TEXTO del centollo a la derecha -->
+                <div class="info-text">
+                    <h2>Centollo</h2>
+                    <p>También conocido como Chánguro o Txangurro, Cámara, Araña, Cranca, Pateiro, Bruño o Cangrejo velludo. Es un <strong>crustáceo braquiuro y decápodo</strong>. Pertenece a la familia Majidae, la misma que los Cangrejos. Vive en la costa en fondos rocosos o arenosos. Habita en profundidades mayores de 100m.</p>
+                    
+                    <div class="specs">
+                        <p><strong>Centollo</strong> <em>Maja squinado</em></p>
+                        <p>(Eng) Spinous spider crab</p>
+                        <p>(Fr) Araignée européenne</p>
+                    </div>
+                    
+                    <div class="details">
+                        <span class="badge"><strong>Peso</strong> 500 gr - 4 kg</span>
+                        <span class="badge"><strong>Dimensiones</strong> 12 - 20 cm</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CHATBOT -->
+    <button class="chatbot-boton" onclick="toggleChatbot()">
+        <i class="fas fa-comments"></i>
+    </button>
+
+    <div class="chatbot-contenedor" id="chatbot">
+        <div class="chatbot-header">
+            <h3><i class="fas fa-crab"></i> El Centollo</h3>
+            <p>Asistente virtual - ¿En qué puedo ayudarte?</p>
+        </div>
+        <div class="chatbot-mensajes" id="chatbot-mensajes">
+            <div class="mensaje bot">
+                <i class="fas fa-robot"></i> ¡Hola! Soy el asistente de El Centollo. Selecciona una pregunta:
+            </div>
+        </div>
+        <div class="chatbot-preguntas">
+            <p>Preguntas frecuentes:</p>
+            <button class="pregunta-btn" onclick="enviarPregunta('¿Cuáles son los horarios?')">¿Cuáles son los horarios?</button>
+            <button class="pregunta-btn" onclick="enviarPregunta('¿Dónde están ubicados?')">¿Dónde están ubicados?</button>
+            <button class="pregunta-btn" onclick="enviarPregunta('¿Cómo puedo contactarlos?')">¿Cómo puedo contactarlos?</button>
+            <button class="pregunta-btn" onclick="enviarPregunta('¿Tienen servicio a domicilio?')">¿Tienen servicio a domicilio?</button>
+            <button class="pregunta-btn" onclick="enviarPregunta('¿Qué métodos de pago aceptan?')">¿Qué métodos de pago aceptan?</button>
+            <button class="pregunta-btn" onclick="enviarPregunta('¿Tienen productos frescos?')">¿Tienen productos frescos?</button>
+            <button class="pregunta-btn" onclick="enviarPregunta('¿Cómo puedo hacer una reserva?')">¿Cómo puedo hacer una reserva?</button>
+            <button class="pregunta-btn" onclick="enviarPregunta('¿Tienen estacionamiento?')">¿Tienen estacionamiento?</button>
+            <button class="pregunta-btn" onclick="enviarPregunta('¿Atienden pedidos grandes?')">¿Atienden pedidos grandes?</button>
+            <button class="pregunta-btn" onclick="enviarPregunta('¿Tienen opciones para alérgicos?')">¿Tienen opciones para alérgicos?</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-features">
+            <div class="feature"><i class="fas fa-history"></i><h4>MÁS DE 100 AÑOS</h4><p>Desde 1911 trabajando con el mejor producto del mar</p></div>
+            <div class="feature"><i class="fas fa-fish"></i><h4>EL PRODUCTO MÁS FRESCO</h4><p>Pescados y mariscos directos de la lonja</p></div>
+            <div class="feature"><i class="fas fa-fire"></i><h4>AHUMADOS ARTESANALES</h4><p>Descubre nuestros procesos de ahumado</p></div>
+            <div class="feature"><i class="fas fa-store"></i><h4>TIENDA PROPIA</h4><p>También te servimos en nuestra tienda física</p></div>
+            <div class="feature"><i class="fas fa-hand-holding-heart"></i><h4>SELECCIONAMOS POR TI</h4><p>Despreocúpate y disfruta del mejor género del mar</p></div>
+        </div>
+        <div class="footer-bottom">
+            <div class="contact-info">
+                <p><i class="fas fa-map-marker-alt"></i> Carrera 1 #93-50 Chicó Alto, Bogotá</p>
+                <p><i class="fas fa-phone"></i> Tel: (57) 316 690 0508</p>
+                <p><i class="fas fa-envelope"></i> servicioalcliente@tramonti.com.co</p>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fab fa-telegram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ✅ SCRIPT CORRECTO -->
+    <script src="js/js.js"></script>
+</body>
+</html>
